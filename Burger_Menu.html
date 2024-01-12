@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animated website</title>
+    <style>
+        /* burger menu!!! */
+        .burger{
+            color: white;
+        }
+        .container{
+            border-radius: 10px;
+            background-color: red;
+            /* height: 150px; */
+            width: 200px;
+            transform: translateX(-400px);
+        }
+       
+        body{
+            background-color: yellow;
+        }
+        #box {
+           
+            list-style: none;
+            /* flex-direction: row; */
+           
+        }
+        li{
+            left: 0;
+            padding: 10px;
+            margin:30px;
+            
+            /* background-color: green; */
+            
+        }
+        a{
+            display: block;
+            padding-right: 10px;
+            left: 0;
+            text-decoration: none;
+            color: white;
+            font-size: large;
+            transition: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+        }
+        a:hover{
+         box-shadow: 3px 3px yellow;
+         transform: scale(0.8);
+        
+        }
+        #b1{
+            background-color: red;
+            width: 150px;
+            border-radius: 8px;
+          
+        }
+        
+        
+        #b2{
+            background-color: red;
+            width: 150px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .bg{
+            background-color: black;
+            height: 5px;
+            width: 30px;
+            margin: 3px;
+        }
+       .bgbox{
+
+           display: inline-block;
+           transition: all 0.3s ease-in-out;
+       }
+        .bgbox:hover{
+            cursor: pointer;
+            box-shadow: 2px 2px red;
+        }
+    </style>
+</head>
+<body>
+    <div class="bgbox" onclick="burger()")>
+        <div class="bg"></div>
+        <div class="bg"></div>
+        <div class="bg"></div>
+
+    </div>
+    <div id ="box2" class="container">
+        <nav>
+            <ul id="box">
+                <li><a class="ab" href="">home</a></li>
+                <li><a class="ab" href="">about</a></li>
+                <li><a  class="ab"href="">services</a></li>
+                <li><a class="ab" href="">contact us</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <!-- <div id="b1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam accusantium harum corporis dolor perferendis, sit facere ducimus, ut cum quos delectus, possimus neque laborum incidunt. Numquam qui blanditiis id perferendis illum atque suscipit. Odit?</div> -->
+    <!-- <div id="b2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto obcaecati eveniet voluptate omnis cum laborum! Ipsum est error enim. Placeat.</div> -->
+</body>
+<script>
+    function burger(){
+        let box = document.getElementById("box2");
+        box.style.transitionDuration = "0.5s";
+        if( box.style.transform != "translateX(30px)")
+        {
+        box.style.transform = "translateX(30px)";
+        }
+        else if( box.style.transform = "translateX(30px)")
+        {
+            box.style.transform = "translateX(-400px)";
+        }
+        
+        
+        
+        
+    }
+    
+</script>
+</html>

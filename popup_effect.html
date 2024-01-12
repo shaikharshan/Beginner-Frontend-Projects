@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal popup</title>
+    <style>
+        #btn{
+            position: absolute;
+            top: 300px;
+            left: 700px;
+            width: 80px;
+            height: 30px;
+            background-color: rgb(57, 168, 57);
+            font-size: large;
+
+        
+        }
+        #btn:hover{
+            transition: all 0.1s ease-in-out;
+            background-color: darkgreen;
+            box-shadow: 3px 3px black;
+
+
+
+        }
+        #btn:active{
+            transform: scale(0.9);
+        }
+        #pop{
+            position:absolute;
+            top : 100px;
+            left : 700px;
+            width : 80px;
+            display:none;
+            background-color: yellow;
+            border: black;
+        }
+
+
+    </style>
+</head>
+<body id="bd">
+    <div class="container">
+        <button id="btn" onclick="popup()">popup</button>   <!-- important -->
+    </div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio rem asperiores assumenda, deleniti quisquam magnam ex corrupti distinctio omnis eos officiis numquam, vitae ipsam. Nisi perspiciatis quas impedit voluptates excepturi.</div>
+    <div id="pop">thanks for clicking this was the popup</div>
+</body>
+<script>
+    function popup(){
+           let pop = document.getElementById("pop");
+        //    let box = document.getElementById("btn");
+           let box = document.getElementById("bd")
+           
+           
+           if(box.style.opacity !='0.5'){
+               
+               pop.style.transitionProperty ='all';
+               pop.style.transitionDuration='1s';
+               box.style.opacity ='0.5' ;
+
+               pop.style.display='block';
+            }
+            else if (box.style.opacity ='0.5')
+            {
+                box.style.opacity ='1' ;
+                pop.style.display='none';
+
+           }
+
+    }
+
+</script>
+</html>
